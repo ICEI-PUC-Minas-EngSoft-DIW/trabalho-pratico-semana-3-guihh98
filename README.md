@@ -8,17 +8,18 @@ Nessa atividade, você deverá montar a página inicial do projeto escolhido, a 
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Guilherme Henrique Moreira Costa
+- Matricula: 855826
+- Proposta de projeto escolhida: 5. Temas e Conteúdos Associados 	Tema 	Conteúdos / Recursos 	Tema e vídeos, curso e aulas, categoria e dicas
+- Breve descrição sobre seu projeto: Projeto tem como idea ser a homepage de uma pagina de web de curso. Exibindo na home cursor em categoria através de sessoes com cards.
 
 
 ## Print do(s) wireframe(s) criado
 
-<<  COLOQUE A IMAGEM AQUI >>
+![alt text](image.png)
 
 
 ## Print da home-page criada
+![alt text](image-1.png)
+![alt text](image-2.png)
 
-<<  COLOQUE A IMAGEM AQUI >>
