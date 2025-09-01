@@ -1,3 +1,68 @@
-body {
-    background-color: aquamarine;
+@import url('./css/global.css');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--color-light-secondary);
+}
+
+nav {
+    background-color: var(--color-dark-primary);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: var(--color-light-primary);
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: var(--color-light-primary);
+    text-decoration: none;
+}
+
+.banner {
+    background-color: var(--color-light-secondary);
+    text-align: center;
+    width: 100%;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner .label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-light-primary);
+    background-color: var(--color-dark-secondary);
+    position: absolute;
+    top: 700px;
 }
