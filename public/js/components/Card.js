@@ -1,13 +1,15 @@
 class Card {
-    constructor(imageUrl, title, author, imageAlt = '') {
+    constructor(imageUrl, title, author, imageAlt = '', additionalData = {}) {
         this.imageUrl = imageUrl;
         this.title = title;
         this.author = author;
         this.imageAlt = imageAlt;
+        this.additionalData = additionalData;
     }
+
     render() {
         return `
-            <div class="card">
+            <div class="card" style="cursor: pointer;">
                 <img src="${this.imageUrl}" alt="${this.imageAlt}">
                 <div class="card-text">
                     <p>${this.title}</p>
@@ -20,7 +22,30 @@ class Card {
     createElement() {
         const cardContainer = document.createElement('div');
         cardContainer.innerHTML = this.render();
-        return cardContainer.firstElementChild;
+        const cardElement = cardContainer.firstElementChild;
+        
+        cardElement.addEventListener('click', () => {
+            this.navigateToCourse();
+        });
+        
+        return cardElement;
+    }
+
+    navigateToCourse() {
+        const courseData = {
+            title: this.title,
+            author: this.author,
+            imageUrl: this.imageUrl,
+            category: this.additionalData.category,
+            duration: this.additionalData.duration,
+            level: this.additionalData.level,
+            description: this.additionalData.description
+        };
+
+        const params = new URLSearchParams(courseData);
+        const courseURL = `pages/curso/index.html?${params.toString()}`;
+        
+        window.location.href = courseURL;
     }
 }
 
