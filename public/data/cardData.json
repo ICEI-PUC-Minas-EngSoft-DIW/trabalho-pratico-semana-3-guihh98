@@ -2,6 +2,7 @@
     "rendaFixa": [
         {
             "imageUrl": "https://picsum.photos/200/100?random=1",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=1",
             "title": "Curso de Renda Fixa Básico",
             "author": "Maria Silva",
             "imageAlt": "Curso de Renda Fixa",
@@ -12,6 +13,7 @@
         },
         {
             "imageUrl": "https://picsum.photos/200/100?random=2",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=2",
             "title": "Investimentos Conservadores",
             "author": "João Santos",
             "imageAlt": "Investimentos Conservadores",
@@ -22,6 +24,7 @@
         },
         {
             "imageUrl": "https://picsum.photos/200/100?random=3",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=3",
             "title": "CDB e Tesouro Direto",
             "author": "Ana Costa",
             "imageAlt": "CDB e Tesouro Direto",
@@ -32,6 +35,7 @@
         },
         {
             "imageUrl": "https://picsum.photos/200/100?random=4",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=4",
             "title": "Fundos de Investimento",
             "author": "Pedro Lima",
             "imageAlt": "Fundos de Investimento",
@@ -43,7 +47,8 @@
     ],
     "topLastMonth": [
         {
-            "imageUrl": "https://picsum.photos/200/200?random=5",
+            "imageUrl": "https://picsum.photos/200/100?random=5",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=5",
             "title": "Análise Técnica Avançada",
             "author": "Carlos Mendes",
             "imageAlt": "Análise Técnica",
@@ -53,7 +58,8 @@
             "description": "Domine as técnicas avançadas de análise gráfica. Indicadores, padrões e estratégias para trading profissional."
         },
         {
-            "imageUrl": "https://picsum.photos/200/200?random=6",
+            "imageUrl": "https://picsum.photos/200/100?random=6",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=6",
             "title": "Day Trade Profissional",
             "author": "Luiza Ferreira",
             "imageAlt": "Day Trade",
@@ -63,7 +69,8 @@
             "description": "Aprenda day trade do zero ao profissional. Estratégias, gerenciamento de risco e psicologia do trader."
         },
         {
-            "imageUrl": "https://picsum.photos/200/200?random=7",
+            "imageUrl": "https://picsum.photos/200/100?random=7",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=7",
             "title": "Criptomoedas para Iniciantes",
             "author": "Roberto Alves",
             "imageAlt": "Criptomoedas",
@@ -73,7 +80,8 @@
             "description": "Introdução ao mundo das criptomoedas. Bitcoin, Ethereum, DeFi e como investir com segurança."
         },
         {
-            "imageUrl": "https://picsum.photos/200/200?random=8",
+            "imageUrl": "https://picsum.photos/200/100?random=8",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=8",
             "title": "Mercado de Ações",
             "author": "Fernanda Rocha",
             "imageAlt": "Mercado de Ações",
@@ -83,7 +91,8 @@
             "description": "Análise fundamentalista e técnica para investimento em ações. Aprenda a escolher as melhores empresas."
         },
         {
-            "imageUrl": "https://picsum.photos/200/200?random=9",
+            "imageUrl": "https://picsum.photos/200/100?random=9",
+            "imageUrlLarge": "https://picsum.photos/600/600?random=9",
             "title": "Planejamento Financeiro",
             "author": "Thiago Barbosa",
             "imageAlt": "Planejamento Financeiro",

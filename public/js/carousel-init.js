@@ -23,7 +23,8 @@ async function initializeCarousels() {
             category: data.category,
             duration: data.duration,
             level: data.level,
-            description: data.description
+            description: data.description,
+            imageUrlLarge: data.imageUrlLarge
         })
     );
     rendaFixaCarousel.addCards(rendaFixaCards);
@@ -34,7 +35,8 @@ async function initializeCarousels() {
             category: data.category,
             duration: data.duration,
             level: data.level,
-            description: data.description
+            description: data.description,
+            imageUrlLarge: data.imageUrlLarge
         })
     );
     topLastMonthCarousel.addCards(topLastMonthCards);

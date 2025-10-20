@@ -35,7 +35,7 @@ class Card {
         const courseData = {
             title: this.title,
             author: this.author,
-            imageUrl: this.imageUrl,
+            image: this.additionalData.imageUrlLarge || this.imageUrl,
             category: this.additionalData.category,
             duration: this.additionalData.duration,
             level: this.additionalData.level,
