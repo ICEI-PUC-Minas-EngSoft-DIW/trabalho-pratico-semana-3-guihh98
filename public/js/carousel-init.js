@@ -1,101 +1,22 @@
-const cardData = {
-    rendaFixa: [
-        {
-            imageUrl: 'https://picsum.photos/200/100?random=1',
-            title: 'Curso de Renda Fixa Básico',
-            author: 'Maria Silva',
-            imageAlt: 'Curso de Renda Fixa',
-            category: 'Renda Fixa',
-            duration: '6 horas',
-            level: 'Iniciante',
-            description: 'Aprenda os fundamentos da renda fixa, incluindo CDB, Tesouro Direto e fundos conservadores. Ideal para quem quer começar a investir com segurança.'
-        },
-        {
-            imageUrl: 'https://picsum.photos/200/100?random=2',
-            title: 'Investimentos Conservadores',
-            author: 'João Santos',
-            imageAlt: 'Investimentos Conservadores',
-            category: 'Renda Fixa',
-            duration: '4 horas',
-            level: 'Iniciante',
-            description: 'Estratégias de investimento para perfil conservador. Entenda como preservar e fazer crescer seu patrimônio com segurança.'
-        },
-        {
-            imageUrl: 'https://picsum.photos/200/100?random=3',
-            title: 'CDB e Tesouro Direto',
-            author: 'Ana Costa',
-            imageAlt: 'CDB e Tesouro Direto',
-            category: 'Renda Fixa',
-            duration: '5 horas',
-            level: 'Iniciante',
-            description: 'Guia completo sobre CDB e Tesouro Direto. Aprenda a escolher os melhores títulos e diversificar sua carteira.'
-        },
-        {
-            imageUrl: 'https://picsum.photos/200/100?random=4',
-            title: 'Fundos de Investimento',
-            author: 'Pedro Lima',
-            imageAlt: 'Fundos de Investimento',
-            category: 'Renda Fixa',
-            duration: '7 horas',
-            level: 'Intermediário',
-            description: 'Entenda como funcionam os fundos de investimento e como escolher os melhores para seu perfil e objetivos.'
-        }
-    ],
-    topLastMonth: [
-        {
-            imageUrl: 'https://picsum.photos/200/200?random=5',
-            title: 'Análise Técnica Avançada',
-            author: 'Carlos Mendes',
-            imageAlt: 'Análise Técnica',
-            category: 'Trading',
-            duration: '12 horas',
-            level: 'Avançado',
-            description: 'Domine as técnicas avançadas de análise gráfica. Indicadores, padrões e estratégias para trading profissional.'
-        },
-        {
-            imageUrl: 'https://picsum.photos/200/200?random=6',
-            title: 'Day Trade Profissional',
-            author: 'Luiza Ferreira',
-            imageAlt: 'Day Trade',
-            category: 'Trading',
-            duration: '15 horas',
-            level: 'Avançado',
-            description: 'Aprenda day trade do zero ao profissional. Estratégias, gerenciamento de risco e psicologia do trader.'
-        },
-        {
-            imageUrl: 'https://picsum.photos/200/200?random=7',
-            title: 'Criptomoedas para Iniciantes',
-            author: 'Roberto Alves',
-            imageAlt: 'Criptomoedas',
-            category: 'Criptomoedas',
-            duration: '8 horas',
-            level: 'Iniciante',
-            description: 'Introdução ao mundo das criptomoedas. Bitcoin, Ethereum, DeFi e como investir com segurança.'
-        },
-        {
-            imageUrl: 'https://picsum.photos/200/200?random=8',
-            title: 'Mercado de Ações',
-            author: 'Fernanda Rocha',
-            imageAlt: 'Mercado de Ações',
-            category: 'Ações',
-            duration: '10 horas',
-            level: 'Intermediário',
-            description: 'Análise fundamentalista e técnica para investimento em ações. Aprenda a escolher as melhores empresas.'
-        },
-        {
-            imageUrl: 'https://picsum.photos/200/200?random=9',
-            title: 'Planejamento Financeiro',
-            author: 'Thiago Barbosa',
-            imageAlt: 'Planejamento Financeiro',
-            category: 'Finanças Pessoais',
-            duration: '6 horas',
-            level: 'Iniciante',
-            description: 'Organize suas finanças pessoais e construa um plano para alcançar seus objetivos financeiros.'
-        }
-    ]
-};
+async function loadCardData() {
+    try {
+        const response = await fetch('../data/cardData.json');
+        const cardData = await response.json();
+        return cardData;
+    } catch (error) {
+        console.error('Erro ao carregar dados dos cards:', error);
+        return null;
+    }
+}
 
-document.addEventListener('DOMContentLoaded', function() {
+async function initializeCarousels() {
+    const cardData = await loadCardData();
+    
+    if (!cardData) {
+        console.error('Falha ao carregar dados dos cards');
+        return;
+    }
+
     const rendaFixaCarousel = new Carousel('renda-fixa-carousel');
     const rendaFixaCards = cardData.rendaFixa.map(data => 
         new Card(data.imageUrl, data.title, data.author, data.imageAlt, {
@@ -117,4 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     );
     topLastMonthCarousel.addCards(topLastMonthCards);
-});
+}
+
+document.addEventListener('DOMContentLoaded', initializeCarousels);
