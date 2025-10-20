@@ -66,3 +66,27 @@ footer ul li a {
     position: absolute;
     top: 700px;
 }
+
+#renda-fixa-carousel .card img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    min-height: 100px;
+}
+
+#renda-fixa-carousel .card {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+#top-last-month-carousel .card img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    min-height: 250px;
+}
+
+#top-last-month-carousel .card {
+    min-width: 200px;
+    max-width: 200px;
+}
