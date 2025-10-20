@@ -10,22 +10,6 @@
 </head>
 
 <body>
-    <header>
-        <input type="search" name="search" id="search">
-        <div>Logo</div>
-        <div>
-            <button>Sign In</button>
-            <button>Sign Up</button>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
     <main class="container">
         <div>
             <div class="banner">
@@ -60,8 +44,14 @@
         </ul>
     </footer>
 
+    <script src="js/components/Header.js"></script>
     <script src="js/components/Card.js"></script>
     <script src="js/carousel-init.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeHeader();
+        });
+    </script>
 </body>
 
 </html>

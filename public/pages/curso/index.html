@@ -11,22 +11,6 @@
 </head>
 
 <body>
-    <header>
-        <input type="search" name="search" id="search">
-        <div>Logo</div>
-        <div>
-            <button>Sign In</button>
-            <button>Sign Up</button>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
     <main class="container">
         <div class="curso-header">
             <button class="btn-voltar" onclick="history.back()">← Voltar</button>
@@ -102,7 +86,13 @@
         </ul>
     </footer>
 
+    <script src="../../js/components/Header.js"></script>
     <script src="curso.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeHeader();
+        });
+    </script>
 </body>
 
 </html>
